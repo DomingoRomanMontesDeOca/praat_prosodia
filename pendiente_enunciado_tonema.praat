@@ -1,4 +1,4 @@
-# pendiente del tonema
+# muestra la pendiente del tonema y del enunciado
 
 tgri = selected("TextGrid")
 tono = selected("Pitch")
@@ -60,11 +60,14 @@ pend_tonema = st_tone/(postrer_punto - tpo_ini_tonema)
 
 divi = pend_tonema/pend_st_enunciado
 
-appendInfoLine: divi
+#writeInfoLine: "st_M-m",tab$,"PenEn",tab$,"PendTon",tab$,"Div"
+appendInfoLine: fixed$(st_M_m,1),tab$,fixed$(pend_st_enunciado,1),tab$,fixed$(pend_tonema,1),tab$,fixed$(divi,1)
 
-#writeInfoLine: "audio",tab$,tab$,"st_M-m",tab$,"PenEn",tab$,tab$,"PendTon"
-appendInfoLine: fixed$(st_M_m,2),tab$,tab$,fixed$(pend_st_enunciado,2),tab$,tab$, fixed$(pend_tonema,2),tab$,tab$,fixed$(divi,2)
 
+
+
+
+# condiciones para 
 
 Erase all
 Black
